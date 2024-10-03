@@ -1,7 +1,13 @@
+import Link from "next/link";
+
 export default function RecipeDetailsItem({ recipeData }) {
 	return (
 		<>
 			<div className="p-6 lg:max-w-6xl max-w-2xl mx-auto">
+				<div className="text-gray-800 text-4xl font-bold mb-12 flex items-center justify-between flex-wrap">
+					<Link href={"/recipe-list"}>Recipe</Link>
+					<Link href={"/"}>Home</Link>
+				</div>
 				<div className="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
 					<div className="w-full lg:sticky top-0 sm:flex gap-2">
 						<img
@@ -24,22 +30,20 @@ export default function RecipeDetailsItem({ recipeData }) {
 							<h3 className="text-xl font-bold text-gray-700">
 								Ingredients:
 							</h3>
-							<p className="mt-1">
+							<p className="mt-2">
 								{recipeData?.ingredients.map(
 									(ingredient, index) =>
-										` (${index + 1})${ingredient}`
+										` (${index + 1}) ${ingredient}`
 								)}
 							</p>
 						</div>
-						<div className="mt-4">
-							<h3 className="text-xl font-bold text-gray-700">
-								Instructions:
-							</h3>
-							<p className="mt-1">
+						<div className="mt-4 text-gray-700">
+							<h3 className="text-xl font-bold">Instructions:</h3>
+							<ul className="mt-2 space-y-3 list-disc pl-4">
 								{recipeData?.instructions.map((instruction) => (
 									<li>{instruction}</li>
 								))}
-							</p>
+							</ul>
 						</div>
 					</div>
 				</div>
