@@ -7,9 +7,10 @@ const RecipeList = ({ recipeList }) => {
 	return (
 		<>
 			<div className="p-4 mx-auto lg:max-w-6xl md:max-w-4xl sm:max-w-full">
-				<h2 className="text-gray-800 text-4xl font-bold mb-12">
-					Recipe
-				</h2>
+				<div className="text-gray-800 text-4xl font-bold mb-12 flex items-center justify-between flex-wrap">
+					<h2>Recipe</h2>
+					<Link href={"/"}>Home</Link>
+				</div>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 					{recipeList && recipeList.length > 0
 						? recipeList.map((recipe) => (
