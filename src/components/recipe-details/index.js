@@ -9,11 +9,11 @@ export default function RecipeDetailsItem({ recipeData }) {
 					<Link href={"/"}>Home</Link>
 				</div>
 				<div className="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
-					<div className="w-full lg:sticky top-0 sm:flex gap-2">
+					<div className="sm:w-full lg:w-4/5 flex justify-center gap-2">
 						<img
 							src={recipeData?.image}
 							alt={recipeData?.name}
-							className="w-4/5 rounded object-cover"
+							className="w-full lg:w-4/5 rounded object-contain"
 						/>
 					</div>
 					<div>
