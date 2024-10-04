@@ -5,7 +5,7 @@ export default function RecipeDetailsItem({ recipeData }) {
 		<>
 			<div className="p-6 lg:max-w-6xl max-w-2xl mx-auto">
 				<div className="text-gray-800 text-4xl font-bold mb-12 flex items-center justify-between flex-wrap">
-					<Link href={"/recipe-list"}>Recipe</Link>
+					<Link href={"/recipe-list"}>Back</Link>
 					<Link href={"/"}>Home</Link>
 				</div>
 				<div className="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
